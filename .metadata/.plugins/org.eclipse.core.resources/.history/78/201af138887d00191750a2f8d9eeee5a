@@ -1,0 +1,10 @@
+package com.example.ec.domain;
+
+public enum Region {
+
+	RALEIGH("Raleigh"),
+	CHARLOTTE("Charlotte"),
+	GREENVILLE("Greenville"),
+	ASHVILLE("Ashville"),
+	DURHAM("Durham");
+}

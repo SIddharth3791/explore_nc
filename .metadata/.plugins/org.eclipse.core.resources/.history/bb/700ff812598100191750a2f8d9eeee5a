@@ -1,0 +1,27 @@
+package com.example.ec.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ec.domain.Tour;
+import com.example.ec.repo.TourPackageRepository;
+import com.example.ec.repo.TourRepository;
+
+@Service
+public class TourService {
+
+	private TourPackageRepository tourPackageRepository;
+	private TourRepository tourRepository;
+
+	@Autowired
+	public TourService(TourRepository tourRepository) {
+		this.tourRepository = tourRepository;
+	}
+	
+
+	public Tour createNewTours()
+	{
+		tourRepository.save(new to)
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.example.ec.repo;
+
+public interface TourPackageRepository {
+
+}

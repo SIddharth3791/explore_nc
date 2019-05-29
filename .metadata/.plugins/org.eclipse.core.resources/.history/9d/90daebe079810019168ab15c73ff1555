@@ -1,0 +1,37 @@
+package com.example.ec;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.ec.service.TourPackageService;
+import com.example.ec.service.TourService;
+
+@SpringBootApplication
+public class ExplorencApplication implements CommandLineRunner{
+
+	@Autowired
+	private TourPackageService tourPackageService;
+	@Autowired
+	private TourService tourService;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(ExplorencApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		tourPackageService.createNewPackage("CLT", "Charlotte");
+		tourPackageService.createNewPackage("RAL", "Raleigh");
+		tourPackageService.createNewPackage("CA", "Cay");
+		tourPackageService.createNewPackage("DUR", "Durham");
+
+		System.out.println("Number of tours packages =" + tourPackageService.total());
+
+
+
+		
+	}
+
+}
